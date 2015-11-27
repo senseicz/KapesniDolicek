@@ -6,8 +6,8 @@ angular.module('KapesniDolicek', ['ionic',
     
 ])
 
-.constant('BaseUrl', 'http://www.fcbdev.cz')
-.constant('ApiEndpoint', 'http://www.fcbdev.cz/api')
+.constant('BaseUrl', 'http://www.bohemians.cz')
+.constant('ApiEndpoint', 'http://www.bohemians.cz/api')
 
 .run(function ($ionicPlatform, DSCacheFactory) {
     $ionicPlatform.ready(function () {
