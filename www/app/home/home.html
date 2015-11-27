@@ -1,0 +1,33 @@
+﻿
+<ion-view class="home-view" title="Novinky" ng-controller="HomeCtrl as vm">
+    <ion-nav-title>
+        <span>Novinky</span>
+    </ion-nav-title>
+    <ion-content>
+        <!-- Refresh to get the new posts -->
+        <ion-refresher pulling-text="Načíst nejnovější..." on-refresh="vm.doRefresh()">
+        </ion-refresher>
+        
+        <div class="posts">
+            <div post-card ng-repeat="hpItem in vm.HomepageItems" class="post-card"></div>
+        </div>
+        
+        <!-- Infinit scroll -->
+        <!--<ion-infinite-scroll ng-if="moreDataCanBeLoaded()" on-infinite="loadMoreData()" distance="1%">
+        </ion-infinite-scroll>-->
+    </ion-content>
+</ion-view>
+
+
+
+<!--<ion-view title="Home" ng-controller="HomeCtrl as vm">
+    <ion-content class="padding has-header">
+        <div class="list">
+            <div class="item item-body" ng-repeat="hpItem in vm.HomepageItems">
+                <div>
+                    {{hpItem.Article.Heading}}
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>-->

@@ -194,3 +194,9 @@ FakesAssemblies/
 
 # Visual Studio 6 workspace options file
 *.opt
+
+#ionic specific
+
+node_modules/
+platforms/
+plugins/ 

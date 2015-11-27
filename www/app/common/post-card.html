@@ -1,0 +1,25 @@
+﻿<div ui-sref="app.article({id:hpItem.ArticleId})"
+     class="height-244" 
+     ng-style="{'background-image':'url({{vm.BaseUrl}}{{hpItem.Article.ArticlePhotoPath_w380}})'}">
+
+    <div class="card-header card-bg-image-transparent-mask">
+        
+            <h1 ng-bind-html="hpItem.Article.Heading | rawHtml"></h1>
+            <h2>
+                <span class="author">{{hpItem.Article.DateCreated | date:'d.M.yyyy h:mm'}}</span> - <span class="author" ng-bind-html="hpItem.Article.Author"></span>
+            </h2>
+        <!--<div class="card-content-outer" post-content>
+            <div class="card-content" dynamic-anchor-fix ng-bind-html="hpItem.Article.Perex | rawHtml"></div>
+        </div>-->
+    </div>
+</div>
+<!--<div class="card-footer">-->
+    <!--<a class="card-button secondary" ng-click="sharePost(post.url)">SHARE</a>-->
+    <!--<a class="card-button primary" ui-sref="app.post({postId :post.id})">READ MORE</a>-->
+    <!--<a ng-show="post.comment_count > 0" class="card-button comments" ui-sref="app.post({postId :post.id})">
+        <i class="icon ion-chatbox"></i>{{post.comment_count}}
+    </a>
+    <a class="card-button secondary bookmark" ng-click="bookmarkPost(post)">
+        <i class="icon ion-bookmark"></i>
+    </a>-->
+<!--</div>-->
