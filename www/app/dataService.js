@@ -65,13 +65,13 @@
             getDataOverNetwork(ApiEndpoint + partialUri).then(function (data) {
                 if (data != null) {
                     cachedItem = {
-                        hash: data.Checksum,
-                        value: data.Value
+                        hash: data.checksum,
+                        value: data.value
                     };
 
                     console.log("Putting data into cache.");
                     self.appCache.put(partialUri, cachedItem);
-                    deferred.resolve(data.Value);
+                    deferred.resolve(data.value);
                 } else {
                     console.log("No data returned from network call.");
                     deferred.reject();

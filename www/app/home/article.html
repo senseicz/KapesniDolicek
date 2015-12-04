@@ -1,19 +1,19 @@
 ﻿<ion-view class="post-view" cache-view="false" ng-controller="ArticleCtrl as vm">
     <ion-nav-title>
-        <span ng-bind-html="vm.Article.Heading"></span>
+        <span ng-bind-html="vm.Article.heading"></span>
     </ion-nav-title>
     <ion-content>
         <div class="post" post-content>
             <div class="card-header">
-                <h1 ng-bind-html="vm.Article.Heading"></h1>
+                <h1 ng-bind-html="vm.Article.heading"></h1>
                 <h2>
-                    <span class="author">{{vm.Article.DateCreated | date:'d.M.yyyy h:mm'}}</span> - <span class="author" ng-bind-html="vm.Article.Authors"></span>
+                    <span class="author">{{vm.Article.dateCreated | date:'d.M.yyyy h:mm'}}</span> - <span class="author" ng-bind-html="vm.authors"></span>
                 </h2>
             </div>
 
-            <img src="{{vm.BaseUrl}}{{vm.Article.PerexPhotoPath}}"/>
+            <img src="{{vm.BaseUrl}}{{vm.Article.perexPhotoPath}}"/>
 
-            <div class="card-content" dynamic-anchor-fix ng-bind-html="vm.Article.ArticleText | rawHtml"></div>
+            <div class="card-content" dynamic-anchor-fix ng-bind-html="vm.Article.articleText | rawHtml"></div>
         </div>
 
         <!--

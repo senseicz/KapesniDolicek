@@ -8,7 +8,7 @@
         vm.BaseUrl = BaseUrl;
 
         dataService.getData("/homepages/10").then(function (data) {
-            vm.HomepageItems = data.HomepageItems;
+            vm.HomepageItems = data.homepageItems;
         });
 
         vm.doRefresh = function () {
@@ -19,7 +19,7 @@
 
             dataService.getData("/homepages/10", true).then(function (data) {
                 console.log("Data are back.");
-                vm.HomepageItems = data.HomepageItems;
+                vm.HomepageItems = data.homepageItems;
                 console.log("Need hide loader 1");
                 $ionicLoading.hide();
             });

@@ -1,12 +1,12 @@
-﻿<div ui-sref="app.article({id:hpItem.ArticleId})"
+﻿<div ui-sref="app.article({id:hpItem.articleId})"
      class="height-244" 
-     ng-style="{'background-image':'url({{vm.BaseUrl}}{{hpItem.Article.ArticlePhotoPath_w380}})'}">
+     ng-style="{'background-image':'url({{vm.BaseUrl}}{{hpItem.article.articlePhotoPath_w380}})'}">
 
     <div class="card-header card-bg-image-transparent-mask">
         
-            <h1 ng-bind-html="hpItem.Article.Heading | rawHtml"></h1>
+            <h1 ng-bind-html="hpItem.article.heading | rawHtml"></h1>
             <h2>
-                <span class="author">{{hpItem.Article.DateCreated | date:'d.M.yyyy h:mm'}}</span> - <span class="author" ng-bind-html="hpItem.Article.Author"></span>
+                <span class="author">{{hpItem.article.dateCreated | date:'d.M.yyyy h:mm'}}</span> - <span class="author" ng-bind-html="hpItem.article.author"></span>
             </h2>
         <!--<div class="card-content-outer" post-content>
             <div class="card-content" dynamic-anchor-fix ng-bind-html="hpItem.Article.Perex | rawHtml"></div>
