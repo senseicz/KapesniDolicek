@@ -1,0 +1,45 @@
+﻿<ion-view class="post-view" title="{{vm.Team.clubTeam.teamName}}" cache-view="false" ng-controller="TeamCtrl as vm">
+    <ion-nav-title>
+        <span ng-bind-html="vm.Team.clubTeam.teamName"></span>
+    </ion-nav-title>
+    <ion-content>
+        <div class="post" post-content>
+            <div class="card-header">
+                <h1 ng-bind-html="vm.Team.clubTeam.teamName"></h1>
+            </div>
+
+            <!--Last and next match-->
+            <div ng-show="vm.Team.prevNextMatchList.previousMatch.isMatchDefined">
+                <div>Minulý zápas</div>
+                <div prevnextmatch match="vm.Team.prevNextMatchList.previousMatch.match">
+                </div>
+            </div>
+
+            <div ng-show="vm.Team.prevNextMatchList.nextMatch.isMatchDefined">
+                <div>Příští zápas</div>
+                <div prevnextmatch match="vm.Team.prevNextMatchList.nextMatch.match">
+                </div>
+            </div>
+
+            <!--Top 5 news team news-->
+
+
+
+        </div>
+
+    </ion-content>
+
+    <ion-footer-bar class="new-comment post-footer bar bar-footer">
+        <!--<form name="comment_form" class="row" novalidate>
+            <div class="col col-80 content col-center">
+                <input class="new-comment-message" type="text" placeholder="Leave a comment..." ng-model="new_comment" required></input>
+            </div>
+            <div class="col col-20 button-container col-center">
+                <button class="button button-clear send" type="submit" ng-click="addComment()" ng-disabled="comment_form.$invalid">
+                    Send
+                </button>
+            </div>
+        </form>-->
+    </ion-footer-bar>
+
+</ion-view>

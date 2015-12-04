@@ -1,0 +1,22 @@
+﻿<div>
+    <div>
+        {{match.homeTeamName}} - {{match.awayTeamName}}
+    </div>
+
+    <!--Last match - we know the score -->
+    <div ng-show="match.homeTeamScore != null">
+        <div>
+            {{match.homeTeamScore}} : {{match.awayTeamScore}}
+            ({{match.homeTeamScoreAfterFirstHalf}} : {{match.awayTeamScoreAfterFirstHalf}})
+        </div>
+        <div ng-show="match.hasReport" ui-sref="app.match({id:match.matchId})">reportáž</div>
+        <div ng-show="match.hasOnline" ui-sref="app.online({id:match.onlineId})">online</div>
+    </div>
+    <!--Next match - we do NOT know the score -->
+    <div ng-show="match.homeTeamScore == null">
+        <div>
+            {{match.matchKickOffDate | date:'d.M.yyyy H:mm'}}
+        </div>
+        <div ng-show="match.hasReport" ui-sref="app.match({id:match.matchId})">detaily</div>
+    </div>
+</div>

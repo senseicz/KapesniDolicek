@@ -1,23 +1,23 @@
-﻿<ion-view class="post-view" title="Článek" cache-view="false" ng-controller="ArticleCtrl as vm">
+﻿<ion-view class="post-view" title="Detail hráče" cache-view="false" ng-controller="PlayerCtrl as vm">
     <ion-nav-title>
-        <span ng-bind-html="vm.Article.heading"></span>
+        <span ng-bind-html="vm.Player.fullNameLastNameFirst"></span>
     </ion-nav-title>
     <ion-content>
         <div class="post" post-content>
             <div class="card-header">
-                <h1 ng-bind-html="vm.Article.heading"></h1>
+                <h1 ng-bind-html="vm.Player.fullNameLastNameFirst"></h1>
                 <h2>
-                    <span class="author">{{vm.Article.dateCreated | date:'d.M.yyyy H:mm'}}</span> - <span class="author" ng-bind-html="vm.authors"></span>
+                    <span class="author">{{vm.Player.playerPosition.positionName}}</span>
                 </h2>
             </div>
 
-            <img src="{{vm.BaseUrl}}{{vm.Article.perexPhotoPath}}" />
+            <img src="{{vm.BaseUrl}}{{vm.Player.playerPhoto}}" />
 
-            <div class="card-content" dynamic-anchor-fix ng-bind-html="vm.Article.articleText | rawHtml"></div>
+            <div class="card-content" dynamic-anchor-fix ng-bind-html="vm.Player.career | rawHtml"></div>
 
             <div class="relatedContent">
-                <div>Osoby:</div>
-                <div playerLink ng-repeat="player in vm.Article.relatedPlayers"></div>
+                <div>Týmy:</div>
+                <div teamLink ng-repeat="team in vm.Player.clubTeams"></div>
             </div>
 
         </div>

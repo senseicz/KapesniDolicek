@@ -1,9 +1,26 @@
 ﻿angular.module('KapesniDolicek.directives', [])
-    .directive('postCard', function() {
-
-        console.log('post-card directive');
-
+    .directive('hpitem', function() {
         return {
-            templateUrl: 'app/common/post-card.html'
+            templateUrl: 'app/directives/hpItem.html'
         };
-    });
+    })
+    .directive('playerlink', function() {
+        return {
+            templateUrl: 'app/directives/playerLink.html'
+        };
+    })
+    .directive('teamlink', function () {
+        return {
+            templateUrl: 'app/directives/teamLink.html'
+        };
+    })
+    .directive('prevnextmatch', function () {
+        return {
+            templateUrl: 'app/directives/matchPrevNext.html',
+            scope: {
+                match: '='
+            }
+        };
+    })
+
+;

@@ -64,6 +64,33 @@ angular.module('KapesniDolicek', ['ionic',
                 "menuContent": {templateUrl: '/app/home/article.html'}
             }
         })
+        .state('app.player', {
+            url: '/player/:id',
+            views: {
+                "menuContent": { templateUrl: '/app/home/player.html' }
+            }
+        })
+        .state('app.team', {
+            url: '/team/:id',
+            views: {
+                "menuContent": { templateUrl: '/app/home/team.html' }
+            }
+        })
+        .state('app.match', {
+            url: '/match/:id',
+            views: {
+                "menuContent": { templateUrl: '/app/home/match.html' }
+            }
+        })
+        .state('app.online', {
+            url: '/online/:id',
+            views: {
+                "menuContent": { templateUrl: '/app/home/online.html' }
+            }
+        })
+
+
+
     ;
 
     // if none of the above states are matched, use this as the fallback
