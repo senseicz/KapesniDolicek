@@ -15,10 +15,27 @@
 
             <div class="card-content" dynamic-anchor-fix ng-bind-html="vm.Article.articleText | rawHtml"></div>
 
-            <div class="relatedContent">
+
+
+
+            <!--<div class="relatedContent" ng-show="vm.Article.relatedPlayers.length > 0">
                 <div>Osoby:</div>
                 <div playerLink ng-repeat="player in vm.Article.relatedPlayers"></div>
+            </div>-->
+
+            <div class="post-actions" ng-show="vm.Article.relatedPlayers.length > 0">
+                <a class="card-button primary">OSOBY</a>
             </div>
+
+            <div class="comments">
+                <div class="list">
+                    <div class="item item-avatar" ng-repeat="player in vm.Article.relatedPlayers">
+                        <img ng-src="{{vm.BaseUrl}}{{player.playerPhoto}}">
+                        <h2 ng-bind-html="player.fullNameFirstNameFirst | rawHtml"></h2>
+                    </div>
+                </div>
+            </div>
+
 
         </div>
 

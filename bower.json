@@ -5,6 +5,7 @@
     "ionic": "driftyco/ionic-bower#1.1.1",
     "ionic-platform-web-client": "~0.2.1",
     "angular-cache": "~3.1.0",
-    "bourbon": "~4.2.3"
+    "bourbon": "~4.2.3",
+    "ngCordova": "*"
   }
 }
